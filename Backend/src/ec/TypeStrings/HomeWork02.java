@@ -26,7 +26,7 @@ public class HomeWork02 {
             fName = fName.substring(0, 1).toUpperCase() + fName.substring(1).toLowerCase();
             firstName[inserts] = fName;
 
-            System.out.println("Last name:");
+            System.out.println("Last name :");
             String lName = sc.nextLine().trim();
 
             lName = lName.substring(0, 1).toUpperCase() + lName.substring(1).toLowerCase();
