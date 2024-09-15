@@ -1,2 +1,4 @@
-package ec.Operators;public class Logical {
+package ec.Operators;
+
+public class Logical {
 }

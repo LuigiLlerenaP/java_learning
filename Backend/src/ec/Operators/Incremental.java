@@ -1,2 +1,4 @@
-package ec.Operators;public class Incremental {
+package ec.Operators;
+
+public class Incremental {
 }

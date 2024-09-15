@@ -1,2 +1,4 @@
-package ec.Operators;public class Relational {
+package ec.Operators;
+
+public class Relational {
 }
