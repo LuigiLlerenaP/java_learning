@@ -28,5 +28,7 @@ public class Logical {
         System.out.println("isOneTrue (Logical OR): " + isOneTrue);    // true
         System.out.println("areBoth (Bitwise AND): " + areBoth);       // true
         System.out.println("areOne (Bitwise OR): " + areOne);          // true
+        
+
     }
 }
