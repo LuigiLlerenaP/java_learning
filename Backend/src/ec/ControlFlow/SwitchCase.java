@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class SwitchCase {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // The switch statement can evaluate primitive types such as int, byte, short, char, and their corresponding wrapper classes.
+        // It does not support evaluating long, float, double, or boolean types.
+        // The switch only checks if the value matches exactly with the specified case; it doesn't evaluate conditions or logical operations.
 
         System.out.println("Insert the number between 0 and 2:");
         int numberA = sc.nextInt();
