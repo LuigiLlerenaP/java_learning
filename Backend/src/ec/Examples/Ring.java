@@ -1,4 +1,4 @@
-package ec.Example;
+package ec.Examples;
 
 public class Ring {
     private int width;
