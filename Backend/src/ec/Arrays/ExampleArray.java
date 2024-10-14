@@ -1,4 +1,4 @@
-package ec.arrays;
+package ec.Arrays;
 
 public class ExampleArray {
     public static void main(String[] args) {

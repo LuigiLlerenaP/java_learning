@@ -1,4 +1,4 @@
-package ec.arrays;
+package ec.Arrays;
 
 public class ExampleIteratorArrays {
     public static void main(String[] args) {

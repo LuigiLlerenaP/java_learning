@@ -1,6 +1,6 @@
-package ec.arrays;
+package ec.Arrays;
 
-public class ExampleBoolSort {
+public class ExampleBubbleSort {
     public static void main(String[] args) {
         // Array of car brands to be sorted
         String[] cards = {"chevrolet", "kia", "toyota", "nissan", "mazda", "ferry", "fiat"};

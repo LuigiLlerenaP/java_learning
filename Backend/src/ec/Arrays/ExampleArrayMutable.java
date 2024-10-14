@@ -1,4 +1,4 @@
-package ec.arrays;
+package ec.Arrays;
 
 import java.util.Arrays;
 import java.util.Collections;
