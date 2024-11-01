@@ -1,34 +1,43 @@
 package ec.OOP;
 
-public class Card {
+public class Car {
+    //Those attributes are the instance
     private String cardName;
-    private String color;
+    private Color color;
     private String manufacturer;
     private String model;
     private int cylinderCapacity = 40;
 
-    public Card() {}
+    //This attribute is of the class not te instance
+    //Modifier Default
+    static  int  totalCars = 0;
+    static int defaultWarrantyYears = 3;
+    static int maxSpeedLimit = 180;
 
-    public Card(String cardName) {
+
+    //Constructor
+    public Car() {}
+
+    public Car(String cardName) {
         this.cardName = cardName;
     }
 
-    public Card(String cardName, String color) {
+    public Car(String cardName, Color color) {
         this(cardName);
         this.color = color;
     }
 
-    public Card(String cardName, String color, String manufacturer) {
+    public Car(String cardName, Color color, String manufacturer) {
         this(cardName, color);
         this.manufacturer = manufacturer;
     }
 
-    public Card(String cardName, String color, String manufacturer, String model) {
+    public Car(String cardName, Color color, String manufacturer, String model) {
         this(cardName, color, manufacturer);
         this.model = model;
     }
 
-    public Card(String cardName, String color, String manufacturer, String model, int cylinderCapacity) {
+    public Car(String cardName, Color color, String manufacturer, String model, int cylinderCapacity) {
         this(cardName, color, manufacturer, model);
         this.cylinderCapacity = cylinderCapacity;
     }
@@ -52,11 +61,11 @@ public class Card {
     }
 
     // Getter and Setter for color
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -114,11 +123,11 @@ public class Card {
             return true; // Same object reference
         }
 
-        if (!(obj instanceof Card)) {
+        if (!(obj instanceof Car)) {
             return false; // Not an instance of Card
         }
 
-        Card c = (Card) obj;
+        Car c = (Car) obj;
         return (this.manufacturer != null && this.model != null &&
                 getManufacturer().equals(c.getManufacturer()) &&
                 getModel().equals(c.getModel()));
@@ -128,9 +137,10 @@ public class Card {
     @Override
     public String toString() {
         return "Card: " + cardName + "\n" +
-                "Color: " + color + "\n" +
+                "Color: " + color.getColor() + "\n" +
                 "Manufacturer: " + manufacturer + "\n" +
                 "Model: " + model + "\n" +
-                "Cylinder Capacity: " + cylinderCapacity + " cc\n";
+                "Cylinder Capacity: " + cylinderCapacity + " cc\n"+
+                "Maximum Speed Limit: " + Car.maxSpeedLimit + "\n";
     }
 }

@@ -1,10 +1,10 @@
 package ec.OOP;
 
-public class ExampleCard {
+public class ExampleCar {
  public static void main(String[] args) {
-  Card card = new Card();
+  Car card = new Car();
   card.setCardName("Sail");
-  card.setColor("Red");
+  card.setColor(Color.GREEN);
   card.setManufacturer("Chevrolet");
   card.setModel("Sedan");
 
@@ -16,12 +16,12 @@ public class ExampleCard {
   System.out.printf("The km per liter: %.2f%n", card.calculateConsumption(300, 0.6F));
   System.out.printf("The km per liter: %d%n", card.calculateConsumption(300, 60));
 
-  Card mazda = new Card("Mazda1", "Red", "Mazda", "Sedan", 45);
-  Card mazda2 = new Card("Mazda1", "Red", "Mazda", "Sedan", 45);
+  Car mazda = new Car("Mazda1", Color.ORANGE, "Mazda", "Sedan", 45);
+  Car mazda2 = new Car("Mazda1", Color.ORANGE, "Mazda", "Sedan", 45);
   System.out.println(mazda);
 
-  Card nissan = new Card("Navara", "Black");
-  Card suzuki = new Card("Husky", "White", "Suzuki", "Pickup");
+  Car nissan = new Car("Navara", Color.BLUE);
+  Car suzuki = new Car("Husky", Color.WHITE, "Suzuki", "Pickup");
 
   // Check if the objects are equal
   System.out.println(mazda == mazda2); // Compares object references
