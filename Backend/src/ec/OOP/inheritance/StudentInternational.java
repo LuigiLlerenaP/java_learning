@@ -3,7 +3,9 @@ package ec.OOP.inheritance;
 public class StudentInternational extends Student {
     private String country;
     private String period;
-    private String languageLevel;
+
+    private LanguageLevel languageLevel;
+
 
     /**
      * Default constructor.
@@ -24,7 +26,7 @@ public class StudentInternational extends Student {
     /**
      * Constructor with all attributes.
      */
-    public StudentInternational(String firstName, String lastName, String country, String period, String languageLevel) {
+    public StudentInternational(String firstName, String lastName, String country, String period, LanguageLevel languageLevel) {
         this(firstName, lastName);
         this.country = country;
         this.period = period;
@@ -54,12 +56,12 @@ public class StudentInternational extends Student {
         this.period = period;
     }
 
-    public String getLanguageLevel() {
+    public LanguageLevel getLanguageLevel() {
         return languageLevel;
     }
 
-    public void setLanguageLevel(String languageLevel) {
-        if (languageLevel == null || languageLevel.isEmpty()) {
+    public void setLanguageLevel(LanguageLevel languageLevel) {
+        if (languageLevel == null ) {
             throw new IllegalArgumentException("Language level cannot be null or empty.");
         }
         this.languageLevel = languageLevel;
@@ -78,5 +80,20 @@ public class StudentInternational extends Student {
                 .append("  - Language Level: ").append(languageLevel).append("\n");
 
         return sb.toString();
+    }
+
+    @Override
+    public String greats() {
+        return super.greats()+"I am "+ getCountry() + "and I am "+ getFullName() +" And my language is "+ getLanguageLevel();
+    }
+
+    @Override
+    public double averageScores() {
+        System.out.println("averageScores"+StudentInternational.class.getCanonicalName());
+        double baseAverage = super.averageScores();
+        if (languageLevel == null) {
+            throw new IllegalStateException("Language level is not set.");
+        }
+     return  ((baseAverage + languageLevel.getLevel()) / 2);
     }
 }

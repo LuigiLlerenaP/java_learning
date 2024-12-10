@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <title>Form</title>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <h1>I am studying Java</h1>
+        <h2>Full-Stack Developer</h2>
+    </div>
+</header>
+
+<main>
+    <section class="form-section">
+        <h3>Fill Out the Form</h3>
+        <hr>
+        <form action="#">
+            <label for="username" title="Enter your username" style="font-weight: bold;">Username</label>
+            <input type="text" id="username" name="username" value="llerenaP">
+            <label for="password" title="Enter your password" style="font-weight: bold;">Password</label>
+            <input type="password" id="password" name="password" value="llerenaP5515">
+            <label for="email" title="Enter your email" style="font-weight: bold;">Email</label>
+            <input type="email" id="email" name="email" value="llerenaP@gmail.com">
+            <label for="age" title="Enter your age" style="font-weight: bold;">Age</label>
+            <input type="number" id="age" name="age" value="24">
+            <label for="experience" title="Describe your experience" style="font-weight: bold;">Experience</label>
+            <textarea name="experience" id="experience" cols="5" rows="9">Developer for two years working in a lot of projects</textarea>
+            <label for="language" title="Select your preferred language" style="font-weight: bold;">Language</label>
+            <select name="language" id="language">
+                <option value='1' selected>Java</option>
+                <option value='2'>Python</option>
+                <option value='3'>PHP</option>
+                <option value='4'>JavaScript</option>
+            </select>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Full-Stack Developer Journey. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

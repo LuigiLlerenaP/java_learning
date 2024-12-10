@@ -156,4 +156,10 @@ public class Person {
                 ", favoriteSport='" + favoriteSport + '\'' +
                 '}';
     }
+
+    public String greats(){
+        return "Hello , how are you?\n";
+    }
+
+
 }

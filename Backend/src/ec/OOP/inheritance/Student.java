@@ -109,4 +109,20 @@ public class Student extends Person {
 
         return sb.toString();
     }
+    @Override
+    public String greats (){
+        return super.greats()+"I am a student and my name is " + getFullName();
+    }
+
+    public double averageScores(){
+        System.out.println("averageScores"+Student.class.getCanonicalName());
+        if (scores == null || scores.isEmpty()) {
+            throw new IllegalStateException("There are no scores available.");
+        }
+        double total = 0;
+        for (double score: scores.values()) {
+            total += score;
+        }
+        return total/scores.size();
+    }
 }

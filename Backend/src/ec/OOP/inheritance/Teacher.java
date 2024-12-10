@@ -70,4 +70,9 @@ public class Teacher extends Person {
                 .append("  - Department: ").append(department).append("\n");
         return sb.toString();
     }
+
+    @Override
+    public String greats() {
+        return super.greats()+"I am teacher , mi name is " +getFullName();
+    }
 }

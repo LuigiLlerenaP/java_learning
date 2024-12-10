@@ -1,14 +1,22 @@
 package ec.OOP.inheritance;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class InheritanceMainTwo {
     public static void main(String[] args) {
         System.out.println("----- Create instance of class student ---------");
+        Map<String, Double> subjectScores = new HashMap<>();
+        subjectScores.put("Matemáticas", 95.5);
+        subjectScores.put("Historia", 89.0);
+        subjectScores.put("Ciencias", 92.0);
         Student luigi = new Student("Luigi", "Llerena", 24, "Cato");
         luigi.setGender("M");
         luigi.setPhone("095885380");
         luigi.setEmail("luigi@gmail.com");
         luigi.setAddress("San Isidro");
         luigi.favoriteSport = "Soccer"; // Protected
+        luigi.setScores(subjectScores);
         System.out.println(luigi);
 
         System.out.println("----- Create instance of class teacher ---------");
@@ -20,17 +28,31 @@ public class InheritanceMainTwo {
         System.out.println(luis);
 
         System.out.println("----- Create instance of class International ---------");
-        StudentInternational anthony = new StudentInternational("Anthony", "Llerena", "Ecuador", "6 months", "Spanish");
+        StudentInternational anthony = new StudentInternational("Anthony", "Llerena", "Ecuador", "6 months", LanguageLevel.GOOD);
         anthony.setGender("M");
         anthony.setPhone("095885380");
         anthony.setEmail("anthony@gmail.com");
         anthony.setAddress("San Isidro");
+        anthony.setScores(subjectScores);
         System.out.println(anthony);
 
         System.out.println("----- Impair Results ---------");
         System.out.println(impair(luis));
         System.out.println(impair(luigi));
         System.out.println(impair(anthony));
+
+        //Great
+        System.out.println("----- Grate ---------");
+        System.out.println(luigi.greats());
+        System.out.println("----- Grate ---------");
+        System.out.println(luis.greats());
+        System.out.println("----- Grate ---------");
+        System.out.println(anthony.greats());
+
+        System.out.println("----- Calculate average ---------");
+        System.out.println(luigi.averageScores());
+        System.out.println("----- Calculate average ---------");
+        System.out.println(anthony.averageScores());
     }
 
     /**
